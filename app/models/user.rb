@@ -1,3 +1,38 @@
 class User < ActiveRecord::Base
-  # Remember to create a migration!
+    has_many :games
+
+    validates :username, :email, :password, :presence => true
+    validates :username, :uniqueness => true
+    validates :email, :uniqueness => true
+
+  include BCrypt
+
+  def password
+    @password ||= Password.new(password_hash)
+  end
+
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
+  end
+
+  def valid_email
+    unless email =~ /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
+      errors.add(:email, "Not a valid email, son")
+    end
+  end
+
+  def username_length
+    unless password.length > 3
+      errors.add(:username, "Username ain't long enough, son")
+    end
+  end
+
+  def password_length
+    unless password.length > 6
+      errors.add(:password, "Password ain't long enough, son")
+    end
+  end
+
 end
+
