@@ -9,4 +9,4 @@
 ![Jkai Hsu](https://github.com/Stephenitis/quizzly/blob/master/public/images/team/jkai.png?raw=true)
 ![Vincent](https://github.com/Stephenitis/quizzly/blob/master/public/images/team/vincent.png?raw=true)
 ![Stephen](https://github.com/Stephenitis/quizzly/blob/master/public/images/team/stephen.png?raw=true)
-![Sidney](https://github.com/Stephenitis/quizzly/blob/master/public/images/team/Sidney.png?raw=true)
+![Sidney](https://github.com/Stephenitis/quizzly/blob/master/public/images/team/sidney.png?raw=true)
