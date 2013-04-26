@@ -34,5 +34,13 @@ class User < ActiveRecord::Base
     end
   end
 
+
+  def authenticate(username, password) 
+    user = User.where("username = ?", username).first
+    user && user.password == password
+  end
+
+
+
 end
 

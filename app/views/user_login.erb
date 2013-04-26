@@ -1,1 +1,23 @@
-user_home.erb
+<div class="container">
+  <div class="page-header">
+    <h1>Log In</h1>
+    <p><a href="/signup">New User</a></p>
+
+  </div>
+
+    <form  method="post" action="/user/login">
+        
+        <h4>Username</h4>
+        <input type="text" class="input-block-level-form" type="text" name="username">
+
+        <h4>Password</h4>
+        <input type="password" class="input-block-level-form" name="password">
+
+        <p></p>
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+       
+    </form>
+    <p style="color: red"><%= @error %></p>
+</div> 
+
+

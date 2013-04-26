@@ -17,8 +17,32 @@ get '/user/login' do
 end
 
 
+
+post '/user/login' do
+
+  @user = User.find_by_username(params[:username])
+  if @user && @user.authenticate(params[:username], params[:password])
+    session[:id] = @user.id
+    redirect "/user/#{@user.id}"
+  else
+    @error = "Invalid email and password"
+    erb :user_login
+  end
+
+end
+
+
+# Needs to be before User Session
+get '/user/logout' do 
+  session.clear
+  redirect '/'
+end
+
+
 get '/user/:id' do
-  @user = User.find(params[:id])
+
+  @user = User.find(session[:id])
   erb :user_home
 end
+
 
