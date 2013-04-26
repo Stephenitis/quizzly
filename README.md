@@ -3,4 +3,4 @@ quizzly
 
 Team Siracha at Dev Bootcamp (DBC)
 
-![Image](../quizzly/master/notes/Screen Shot 2013-04-26 at 12.12.32 PM.png?raw=true)
+![Image](https://github.com/Stephenitis/quizzly/blob/master/notes/Screen%20Shot%202013-04-26%20at%2012.12.32%20PM.png)
