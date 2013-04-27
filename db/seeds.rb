@@ -23,3 +23,9 @@ end
 
 seed_users
 seed_decks
+
+
+User.create(username: 'test',
+      email: 'test@email.com',
+      password: "test")
+  

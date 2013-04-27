@@ -40,7 +40,6 @@ end
 
 
 get '/user/:id' do
-
   @user = User.find(session[:id])
   erb :user_home
 end
