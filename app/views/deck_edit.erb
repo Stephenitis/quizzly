@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1>Edit <% @deck.name %> Deck</h1>
+  </div>
+
+    <form  method="post" action="/deck/<%=@deck.id%>/edit">
+        
+        <h4>Deck Name</h4>
+        <input type="text" class="input-block-level-form" type="text" name="name" value="<% @deck.name %>">
+        <p></p>
+        <button class="btn btn-large btn-primary" type="submit">Create Deck</button>
+
+        <p style="color: red"><%= @error %></p>
+    </form>
+
+  </div>

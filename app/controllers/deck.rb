@@ -20,11 +20,17 @@ post '/deck/new' do
   end
 end
 
-
 get '/deck/:id' do 
   @deck = Deck.find(params[:id])
   erb :deck
 end
 
+get '/deck/:id/edit' do 
+  @deck = Deck.find(params[:id])
+  erb :deck_edit
+end
 
-
+post '/deck/:id/edit' do 
+  @deck = Deck.find(params[:id])
+  @deck.update_attributes(params)
+end
