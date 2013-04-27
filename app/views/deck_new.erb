@@ -2,17 +2,18 @@
 
   <div class="page-header">
     <h1>New Deck</h1>
+    <%= @user.username %>
   </div>
 
     <form  method="post" action="/deck/new">
         
         <h4>Deck Name</h4>
         <input type="text" class="input-block-level-form" type="text" name="name">
-
+        <input type="hidden" class="input-block-level-form" type="number" value='<%=@user.id %>'>
 
         <p></p>
         <button class="btn btn-large btn-primary" type="submit">Create Deck</button>
-
+          
         <p style="color: red"><%= @error %></p>
     </form>
 

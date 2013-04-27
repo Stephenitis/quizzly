@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-    has_many :games
+    has_many :games, :decks
 
     validates :username, :email, :password, :presence => true
     validates :username, :uniqueness => true

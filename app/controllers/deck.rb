@@ -5,13 +5,15 @@ get '/decks' do
 end
 
 get '/deck/new' do
-
+  @user = User.find(session[:id])
   erb :deck_new
 end
 
 
 post '/deck/new' do
-  @deck = Deck.create(:name => params[:name])
+  puts params
+  @deck = Deck.create(params)
+  p @deck
   if @deck 
     redirect "/deck/#{@deck.id}"
   else
