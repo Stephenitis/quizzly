@@ -9,18 +9,9 @@ get '/deck/new' do
   erb :deck_new
 end
 
-
 post '/deck/new' do
-  puts "your params are"
-  p params
   @deck = Deck.create(params)
-  p @deck
-  if @deck 
-    redirect "/deck/#{@deck.id}"
-  else
-    @errors = "you need to name your deck"
-    erb :deck_new
-  end
+  create_deck
 end
 
 get '/deck/:id' do 
