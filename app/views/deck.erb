@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="page-header">
+    <h1><%= @deck.name %></h1>
+  </div>
+
+<ul>  
+  <% @deck.cards.each do |card| %>
+  <li>Question : <%= card.question %></li>
+    <ul>
+      <li>Answer:<%= card.answer %></li>
+    </ul>  
+  <% end %>
+</ul>
+
+</div> 
+
+
+
