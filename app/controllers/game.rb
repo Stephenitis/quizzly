@@ -4,6 +4,7 @@ end
 
 post '/game/create' do
   @game = Game.create(params[:game_deck])
+  session[:cards_in_current_game] = @game.deck.cards.map { |card| card.id } 
   redirect to "/game/id/#{@game.id}"
 end
 
