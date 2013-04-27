@@ -3,5 +3,6 @@ class CreateAttempts < ActiveRecord::Migration
     create_table :attempts do |t|
       t.references :game, :card
       t.boolean :status
+    end
   end
 end
