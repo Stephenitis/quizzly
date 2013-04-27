@@ -3,10 +3,10 @@
     <h1>Deck Index</h1>
   </div>
 
-<ul>  
+<ol>  
   <% @decks.each do |deck| %>
   <li><%= deck.name %> : <a href="/deck/<%= deck.id %>"> View Deck</a></li>
   <% end %>
-</ul>
+</ol>
 
 </div> 

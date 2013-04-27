@@ -1,1 +1,16 @@
-cards_index.erb
+<div class="container">
+  <div class="page-header">
+    <h1>Card Index</h1>
+  </div>
+
+<ul>  
+  <% @cards.each do |card| %>
+  <li> Deck:<%= card.deck.name %></li>
+    <ul>
+      <li>Question : <%= card.question %></li>
+      <li>Answer:<%= card.answer %></a></li>
+    </ul>  
+  <% end %>
+</ul>
+
+</div> 
