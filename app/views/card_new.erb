@@ -1,0 +1,17 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1>New Question</h1>
+  </div>
+
+    <form method="post" action="/card/new">
+        
+        <h4>Card Question</h4>
+        <input type="text" class="input-block-level-form" type="text" name="question"><br>
+        <h4>Card Answer</h4>
+        <input type="text" class="input-block-level-form" type="text" name="answer">
+        <button class="btn btn-large btn-primary" type="submit">Create Question</button>
+        <p style="color: red"><%= @error %></p>
+    </form>
+
+  </div>

@@ -4,9 +4,27 @@ get '/decks' do
   erb :decks_index
 end
 
+get '/deck/new' do
 
-# show card for this deck id
+  erb :deck_new
+end
+
+
+post '/deck/new' do
+  @deck = Deck.create(:name => params[:name])
+  if @deck 
+    redirect "/deck/#{@deck.id}"
+  else
+    @errors = "you need to name your deck"
+    erb :deck_new
+  end
+end
+
+
 get '/deck/:id' do 
   @deck = Deck.find(params[:id])
   erb :deck
 end
+
+
+

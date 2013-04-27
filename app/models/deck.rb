@@ -1,4 +1,5 @@
 class Deck < ActiveRecord::Base
+validates :name, :presence =>true
  has_many :cards
- has_many :games
+belongs_to :games
 end
