@@ -13,7 +13,7 @@ end
 post '/deck/new' do
   @deck = Deck.create(:name => params[:name])
   if @deck 
-    redirect "deck/#{@deck.id}"
+    redirect "/deck/#{@deck.id}"
   else
     @errors = "you need to name your deck"
     erb :deck_new
@@ -21,9 +21,6 @@ post '/deck/new' do
 end
 
 
-
-
-# show card for this deck id
 get '/deck/:id' do 
   @deck = Deck.find(params[:id])
   erb :deck
