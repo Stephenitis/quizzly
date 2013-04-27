@@ -1,0 +1,16 @@
+
+<form method="post" action="/game/attempt">
+  <input type="hidden" name="game_id" value="<%= @current_game_id %>" >
+  <input type="hidden" name="card_id" value="<%= @current_card.id %>" >
+
+  <div id="question"><%= @current_card.question %></div>
+  
+  <input type="button" id='show-answer-button' value="Show Answer" >
+
+  <br><br>
+
+  <div id="answer">
+    <p><%= @current_card.answer %></p>
+    <p><input type="submit" name="status" value="true" ><input type="submit" name="status" value="false" ></p>
+  </div>
+</form>
