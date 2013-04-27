@@ -1,5 +1,5 @@
 get '/' do
   # Look in app/views/index.erb
-  p params
+  session[:id]
   erb :index
 end
