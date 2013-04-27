@@ -1,5 +1,5 @@
 get '/game/create' do
-  
+  # does anything need to go here? -vincent
 end
 
 post '/game/create' do
@@ -26,7 +26,7 @@ get '/game/play' do
 end
 
 post '/game/attempt' do
-  att = Attempt.create(params[:game_play])
+  Attempt.create(params)
   session[:current_card_position] += 1
   redirect to '/game/play'
 end

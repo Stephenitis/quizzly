@@ -1,20 +1,11 @@
 class User < ActiveRecord::Base
-    has_many :games
-    has_many :decks
-    validates :username, :email, :password, :presence => true
-    validates :username, :uniqueness => true
-    validates :email, :uniqueness => true
-
   include BCrypt
 
-  def password
-    @password ||= Password.new(password_hash)
-  end
-
-  def password=(new_password)
-    @password = Password.create(new_password)
-    self.password_hash = @password
-  end
+  has_many :games
+  has_many :decks
+  validates :username, :email, :password, :presence => true
+  validates :username, :uniqueness => true
+  validates :email, :uniqueness => true
 
   def valid_email
     unless email =~ /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/
@@ -34,13 +25,18 @@ class User < ActiveRecord::Base
     end
   end
 
-
   def authenticate(username, password) 
     user = User.where("username = ?", username).first
     user && user.password == password
   end
 
+  def password
+    @password ||= Password.new(password_hash)
+  end
 
-
+  def password=(new_password)
+    @password = Password.create(new_password)
+    self.password_hash = @password
+  end
 end
 
