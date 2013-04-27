@@ -5,5 +5,6 @@ class CreateDecks < ActiveRecord::Migration
       t.references :user
       t.timestamps
     end
+    add_index :decks, [:user_id]
   end
 end
