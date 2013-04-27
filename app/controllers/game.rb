@@ -26,7 +26,9 @@ get '/game/play' do
 end
 
 post '/game/attempt' do
-  att = Attempt.create(params[:game_play])
+  puts 'below are the params'
+  puts params
+  Attempt.create(params)
   session[:current_card_position] += 1
   redirect to '/game/play'
 end
