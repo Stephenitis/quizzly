@@ -1,0 +1,32 @@
+\d
+\q
+\d
+\q
+\d
+\q
+\s
+\d
+\h
+\
+\q
+\dt
+select * from games
+;
+exit
+exit
+\q
+select * from games
+;
+select * from decks;
+select * from cards;
+select * from games;
+\q
+\q
+\dt
+select * from attempts
+;
+\help
+\dt
+show attempts
+;
+\s attempts

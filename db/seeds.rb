@@ -9,7 +9,7 @@ end
 def seed_decks
   a = Deck.create(name: "Ruby Deck")
   
-  100.times do |x|
+  20.times do |x|
     a.cards << Card.create( question: "q" + x.to_s,
                          answer: "a" + x.to_s)
   end
