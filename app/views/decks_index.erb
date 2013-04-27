@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="page-header">
+    <h1>Deck Index</h1>
+  </div>
+
+<ul>  
+  <% @decks.each do |deck| %>
+  <li><%= deck.name %> : <a href="/deck/<%= deck.id %>"> View Deck</a></li>
+  <% end %>
+</ul>
+
+</div> 

@@ -2,7 +2,7 @@
 Bash
 - ps auxww | grep ruby
 - rake db:drop; rake db:create; rake db:migrate; shotgun
-
+- ps auxww | grep ruby
 ------------------------------------------------
 # Requirements
 - A page that lists all the categories
