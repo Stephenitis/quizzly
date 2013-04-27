@@ -4,11 +4,11 @@
   </div>
 
 <ul>  
+  <input class="btn btn-large btn-primary" type="button" value="Add Card" onclick="location.href='/card/<%= @deck.id%>/new';">
   <% @deck.cards.each do |card| %>
-  <li>Question : <%= card.question %></li>
-    <ul>
-      <li>Answer:<%= card.answer %></li>
-    </ul>  
+
+  <% @card = card %>
+  <%= erb :_card, :layout => false %>  
   <% end %>
 </ul>
 

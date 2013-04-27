@@ -11,7 +11,8 @@ end
 
 
 post '/deck/new' do
-  puts params
+  puts "your params are"
+  p params
   @deck = Deck.create(params)
   p @deck
   if @deck 
