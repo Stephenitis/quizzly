@@ -32,8 +32,7 @@ get '/user/stats' do
     total = game.attempts.count
     correct = game.attempts.where(status: true).count
     incorrect = total - correct
-    percentage = (correct.to_f / total.to_f) * 100 if correct > 0
-
+    percentage = ((correct.to_f / total.to_f) * 100).to_f.round(0) if correct > 0
     @attempts_history[game.id] = [game.deck.name, total, correct, incorrect, percentage]
     @percentage_data << {game_id: game.id, percentage: percentage}
   end
@@ -64,5 +63,4 @@ get '/user/:id' do
   @user = User.find(session[:id])
   erb :user_home
 end
-
 

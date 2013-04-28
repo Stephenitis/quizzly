@@ -1,17 +1,14 @@
-<div class="container">
+<div class="container deck_container">
   <div class="page-header">
     <h1><%= @deck.name %></h1>
   </div>
-
-<ul>  
-  <input class="button" type="button" value="Add Card" onclick="location.href='/card/<%= @deck.id%>/new';">
-  <% @deck.cards.each do |card| %>
-
-  <% @card = card %>
-  <%= erb :_card, :layout => false %>  
-  <% end %>
-</ul>
-
+  <ul>  
+    <% @deck.cards.each do |card| %>
+    <% @card = card %>
+    <%= erb :_card, :layout => false %>  
+    <% end %>
+    <input class="button" type="button" value="Add Card" onclick="location.href='/card/<%= @deck.id%>/new';">
+  </ul>
 </div> 
 
 

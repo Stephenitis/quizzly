@@ -1,5 +1,13 @@
 
 
+// $(".game_deck_board").on('click','a',function(e){
+//   e.preventDefault();
+//   $.ajax({
+//     url: '/deck/1',
+//     type: 'get'}).done(function(data) {
+//       $(this).append(data);
+//     });
+// });
 
 
 $(document).ready(function() {
@@ -9,16 +17,9 @@ $(document).ready(function() {
   });
 
 
-
-$(".game_deck_board").on('click','a',function(e){
-  e.preventDefault();
-  $('.appendafterthis').removeClass('.appendafterthis');
-  ($(this)).addClass("appendafterthis");
-  $.ajax({
-    url: '/deck/1',
-    type: 'get'}).done(function(data) {
-      $('.appendafterthis').append(data);
-    });
+$(".game_deck_board").magnificPopup({
+  delegate: 'a',
+  type: 'ajax'
 });
 
 

@@ -10,7 +10,7 @@
           <h2><%= deck.name %></h2><p><%=deck.cards.length%> cards</p>
         </span>
         
-        <a href="/deck/<%=deck.id%>">View all cards </a>
+        <a class= "test-popup-link" href="/deck/<%=deck.id%>">View all cards </a>
         <input type='hidden' name='game_deck[deck_id]' value='<%= deck.id %>'>
         <input type='hidden' name='game_deck[user_id]' value='<%= @user.id %>'><br>
         <input class='button' type='submit' value='play!'>   

@@ -14,4 +14,8 @@ helpers do
   def clear_session
     session.clear
   end
+
+  def logged_in?
+    return true if session[:id]
+  end
 end
