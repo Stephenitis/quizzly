@@ -24,8 +24,12 @@ get '/game/play' do
     @deck = Deck.find(session[:deck_id])
     erb :game_page
   else
-    "congrats you are done"
+    redirect to '/game/stats'
   end
+end
+
+get '/game/stats' do
+  erb :game_stats
 end
 
 post '/game/attempt' do

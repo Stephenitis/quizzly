@@ -7,3 +7,22 @@
 th {
   text-align: left;
 }
+nav {
+  background: yellow;
+  width: 100%;
+  display: inline-block;
+}
+footer{
+  background-color: yellow;
+
+}
+
+nav h1 {
+  float: left;
+
+}
+
+nav a {
+
+  float: right;
+}
