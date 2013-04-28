@@ -16,7 +16,7 @@ end
 
 get '/deck/:id' do 
   @deck = Deck.find(params[:id])
-  erb :deck
+  erb :deck, :layout => false
 end
 
 get '/deck/:id/edit' do 

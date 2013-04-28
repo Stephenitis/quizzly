@@ -83,6 +83,9 @@ nav a {
 
 }
 
+#bar-example{
+  width-size: 100%;
+}
 
 #game_deck_container {
 
@@ -91,12 +94,12 @@ nav a {
 }
 
 .button {
-    padding: 10px 15px;
-    background: green;
-    color: #FFF;
-    border-radius: 9px;
-    box-shadow: 2px  2px  2px 2px  #888;
-    font-family: 'Eater';
+  padding: 10px 15px;
+  background: green;
+  color: #FFF;
+  border-radius: 9px;
+  box-shadow: 2px  2px  2px 2px  #888;
+  font-family: 'Marcellus SC', serif;
 }
 
 h1, h2, h3, h4, h5, h6{

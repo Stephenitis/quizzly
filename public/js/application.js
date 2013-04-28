@@ -9,6 +9,20 @@ $(document).ready(function() {
   });
 
 
+
+$(".game_deck_board").on('click','a',function(e){
+  e.preventDefault();
+  $('.appendafterthis').removeClass('.appendafterthis');
+  ($(this)).addClass("appendafterthis");
+  $.ajax({
+    url: '/deck/1',
+    type: 'get'}).done(function(data) {
+      $('.appendafterthis').append(data);
+    });
+});
+
+
+
 if (typeof $('#data').attr('value') === 'undefined')
 {
 } else
