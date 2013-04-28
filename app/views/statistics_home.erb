@@ -1,0 +1,23 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1>Game Statistics </h1>
+  </div>
+  <div class="game_stats">
+    <p>game id</p>
+    <p>deck name</p>
+    <p>total cards</p>
+    <p>correct</p>
+    <p>incorrect</p>
+  </div>
+  <% @attempts_history.each do |game_id, game_information| %>
+    <div class="game_stats"><p><%= game_id %></p>
+    <% game_information.each do |stat| %>
+       <p><%= stat %></p>
+    <% end %></div>
+  <% end %>
+
+
+
+
+</div>

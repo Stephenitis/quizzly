@@ -8,6 +8,10 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+.game_stats p {
+  display: inline-block;
+  width: 60px;}
+
 article,
 aside,
 details,

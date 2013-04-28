@@ -21,13 +21,18 @@ get '/game/play' do
     @current_game_id = session[:current_game_id]
     erb :game_page
   else
-    "congrats you are done"
+    @game = Game.find(session[:current_game_id])
+    @game.status = true
+    @game.save
+    redirect "/stats/home"
   end
 end
 
 post '/game/attempt' do
+  p params
   Attempt.create(params)
   session[:current_card_position] += 1
   redirect to '/game/play'
 end
 
+  # if Game.find(params[:game_deck][:user_id]).select { |game| game.deck_id == params[:game_deck][:deck_id] && game.status == false }

@@ -1,5 +1,8 @@
 get '/' do
   # Look in app/views/index.erb
-  session[:id]
-  erb :index
+  if session[:id]
+    redirect to "/user/#{session[:id]}"
+  else
+    erb :index
+  end
 end
