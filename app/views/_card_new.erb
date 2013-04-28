@@ -1,0 +1,11 @@
+<div>
+    <form class="create-card" method="post" action="/card/new">
+        <p>Card Question</p>
+        <input type="text" class="input-block-level-form" name="question"><br>
+        <p>Card Answer</p>
+        <input type="text" class="input-block-level-form" name="answer"><br>
+        <input type="hidden" class="input-block-level-form" type="number" value="<%= @deck.id %>" name="deck_id">
+        <input type="submit" value="Submit" >
+        <p style="color: red"><%= @error %></p>
+    </form>
+</div>

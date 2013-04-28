@@ -28,3 +28,4 @@ post '/deck/:id/edit' do
   @deck = Deck.find(params[:id])
   @deck.update_attributes(params)
 end
+

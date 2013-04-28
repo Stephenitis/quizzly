@@ -33,7 +33,9 @@ nav {
 }
 
 footer{
-  background-color: yellow;
+  background-color: white;
+  bottom: 0;
+  position:fixed;
 
 }
 
@@ -112,4 +114,14 @@ h1, h2, h3, h4, h5, h6{
 
 .deck_container .button{
   float: right;
+}
+.game_deck_board{
+border:2px solid;
+margin: 5px 5px 5px 5px;
+padding:5px 5px 10px 5px;
+}
+.cards{
+  border:1px solid;
+  padding:5px;
+  margin: 5px;
 }

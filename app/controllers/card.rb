@@ -11,9 +11,11 @@ end
 
 
 post '/card/new' do
+  p "find me"
+  p params
   @card = Card.create(params)
   if @card 
-    redirect "/deck/#{@card.deck_id}"
+    erb :card
   else
     @errors = "Please fill in both Question and Answer fields!"
     erb :card_new

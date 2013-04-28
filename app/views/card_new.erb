@@ -5,14 +5,14 @@
 
   </div>
 
-    <form method="post" action="/card/new">
+    <form class ="newcard" method="post" action="/card/new">
         
-        <h4>Card Question</h4>
-        <input type="text" class="input-block-level-form" type="text" name="question"><br>
-        <h4>Card Answer</h4>
-        <input type="text" class="input-block-level-form" type="text" name="answer"><br>
-        <input type="hidden" class="input-block-level-form" type="number" value="<%= @deck.id %>" name="deck_id">
-        <button class="button" type="submit">Create Card</button>
+        <label for="question">Card Question</label>
+        <input type="text" name="question"><br>
+        <label for="answer">Card Answer</label>
+        <input type="text" name="answer"><br>
+        <input type="hidden" type="number" value="<%= @deck.id %>" name="deck_id">
+        <button class="button create-card" type="submit">Create Card</button>
         <p style="color: red"><%= @error %></p>
     </form>
 
