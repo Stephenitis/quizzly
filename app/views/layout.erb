@@ -4,7 +4,7 @@
   
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/application.css">
-  <link rel="stylesheet" href="/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="/css/bootstrap.css"> -->
     <style type="text/css">
       body {
         padding-top: 40px;
@@ -49,19 +49,24 @@
 
   <nav>
 
-    <header>
+
 
       <h1>quizzly</h1>
-      <a href='/user/login'>Login</a>
-      <a href='/user/signup'>Signup</a>
-      <a href="/user/logout">Logout</a>
-      <a href="/user/<%= session[:id] %>">Home</a>
 
-    </header>
+      <div class="navlinks">
+        <a href='/user/login'>Login</a>
+        <a href='/user/signup'>Signup</a>
+        <a href="/user/logout">Logout</a>
+      <a href="/user/<%= session[:id] %>">Home</a>
+      </div>
+
 
   </nav>
 
   <%= yield %>
+  
+  <footer>Team Siracha Dev Bootcamp 2013
+  </footer>
 
 </body>
 </html>

@@ -16,7 +16,6 @@ get '/game/' do
 end
 
 get '/game/play' do
-
   unless session[:cards_in_current_game].length == session[:current_card_position]
     current_card_id = session[:cards_in_current_game][session[:current_card_position]]
     @current_card = Card.find(current_card_id)
@@ -27,8 +26,12 @@ get '/game/play' do
     @game = Game.find(session[:current_game_id])
     @game.status = true
     @game.save
-    redirect "/stats/home"
+    redirect "/user/stats"
   end
+end
+
+get '/game/stats' do
+  erb :game_stats
 end
 
 post '/game/attempt' do

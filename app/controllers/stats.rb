@@ -1,4 +1,4 @@
-get 'user/stats/:id' do 
+get '/user/stats/' do 
   
   @attempts_all = Game.find_all_by_user_id(session[:id]).map { |game| game.attempts }.flatten
   # @game = Game.find_all_by_user_id(session[:id])
