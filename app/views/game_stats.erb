@@ -1,9 +1,15 @@
 <div class="container">
 
   <div class="page-header">
-    <h2>Your Game Stats<%= %></h2> 
+    <h1>Correct vs Incorrect
+      <div id="donut-example"><h2>Your Game Stats<%= %></h2> 
+        <div id="correct"><%= @correct %></div>
+        <div id="incorrect"><%= @incorrect %></div>
+      </div>
+      <h1>Time taken per Question</h2>
+        <div id="line-example"></div>
 
-  
-    
-  </div>
-</div>
+        <input id="data" type="hidden" value=<%= @test.to_json %>>
+
+      </div>
+    </div>
