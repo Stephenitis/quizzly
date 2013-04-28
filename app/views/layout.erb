@@ -46,10 +46,22 @@
   <title></title>
 </head>
 <body>
+
   <nav>
-  <header><h1>Quizzly</h1>
-  </header>
+
+    <header>
+
+      <h1>quizzly</h1>
+      <a href='/user/login'>Login</a>
+      <a href='/user/signup'>Signup</a>
+      <a href="/user/logout">Logout</a>
+      <a href="/user/<%= session[:id] %>">Home</a>
+
+    </header>
+
   </nav>
+
   <%= yield %>
+
 </body>
 </html>
