@@ -7,6 +7,7 @@ body {
 .container {
   margin: 40px auto;
   width: 720px;
+  background-color: rgba(0, 0, 0, 0.1);
 
 
 }
@@ -22,7 +23,7 @@ nav {
   position: fixed;  
   padding: 10px 15px 10px 15px;
   height: 40px;
-  background: rgba(230, 103, 154, 0.5) ;
+  background: white ;
 }
 
 footer{
@@ -32,10 +33,15 @@ footer{
 
 nav h1 {
   float: left;
-
+  
+}
+nav h1 a {
+  color:gray;
 }
 
-
+nav h1 a:hover {
+  color: black;
+}
 
 .game_stats p {
   display: inline-block;
@@ -51,7 +57,18 @@ h1 {
   width: 250px;
   padding-top: 10px;
   float: right;
+
 }
+
+.navlinks a {
+  color: gray;
+}
+
+.navlinks a:hover {
+  color: black;
+}
+
+
 
 nav a {
 
@@ -65,4 +82,11 @@ nav a {
 
   border: 3px solid gray;
   padding: 10px;
+}
+
+.button {
+    padding: 10px 15px;
+    background: #4479BA;
+    color: #FFF;
+
 }
