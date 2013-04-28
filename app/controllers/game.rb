@@ -26,7 +26,7 @@ get '/game/play' do
     @game = Game.find(session[:current_game_id])
     @game.status = true
     @game.save
-    redirect "/user/stats"
+    redirect "/user/stats/#{session[:current_game_id]}"
   end
 end
 

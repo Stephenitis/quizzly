@@ -40,6 +40,21 @@ end
 
 
 
+get '/user/stats/:id' do
+  @game = Game.find(params[:id])
+  @correct = @game.attempts.where(status: true).count
+  @incorrect = @game.attempts.where(status: false).count
+  @time_series = @game.attempts.map { |attempt| attempt.created_at }
+  
+  @test =[]
+  (@time_series.length-1).times do |x|
+    p x
+    @test << { attempts: x, time: (@time_series[x+1]-@time_series[x])}
+  end
+  erb :game_stats
+end
+
+
 get '/user/:id' do
   @user = User.find(session[:id])
   erb :user_home

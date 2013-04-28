@@ -4,20 +4,32 @@
     <h1>Game Statistics </h1>
   </div>
   <div class="game_stats">
-    <p>game id</p>
-    <p>deck name</p>
-    <p>total cards</p>
-    <p>correct</p>
-    <p>incorrect</p>
+    <table>
+      <tr>
+        <td>game id</td>
+        <td>deck name</td>
+        <td>total cards</td>
+        <td>correct</td>
+        <td>incorrect</td>
+      </tr>
+
+      <% @attempts_history.each do |game_id, game_information| %>
+      <tr>
+        <td>
+          <%= game_id %>
+        </td>
+        <% game_information.each do |stat| %>
+        <td>
+          <%= stat %>
+        </td>
+        <% end %>
+        <td>
+          <a href="/user/stats/<%= game_id %>">See Stats</a>
+        </td>
+      </tr>
+      <% end %>
+
+    </table>
   </div>
-  <% @attempts_history.each do |game_id, game_information| %>
-    <div class="game_stats"><p><%= game_id %></p>
-    <% game_information.each do |stat| %>
-       <p><%= stat %></p>
-    <% end %></div>
-  <% end %>
-
-
-
 
 </div>
