@@ -6,10 +6,14 @@
     <% deck_all.each do |deck| %>
     <div class="game_deck_board">
       <form method="post" action="/game/create">  
-        <h1><%= deck.name %></h1>
+        <span>
+          <h1><%= deck.name %></h1><h2><%=deck.cards.length%> cards</h2>
+        </span>
+        
+        <a href="/deck/<%=deck.id%>">View all cards </a>
         <input type='hidden' name='game_deck[deck_id]' value='<%= deck.id %>'>
-        <input type='hidden' name='game_deck[user_id]' value='<%= @user.id %>'>
-        <input type='submit' value='play!'>   
+        <input type='hidden' name='game_deck[user_id]' value='<%= @user.id %>'><br>
+        <input class='btn btn-large btn-primary' type='submit' value='play!'>   
       </form>
     </div>
     <% end %>
