@@ -8,12 +8,18 @@ body {
   margin: 40px auto;
   width: 720px;
   background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 10px 10px 20px;
 
 
 }
 
 th {
   text-align: left;
+}
+
+.page-header{
+  border:1px solid;
+  padding: 10px;
 }
 
 nav {
@@ -86,7 +92,13 @@ nav a {
 
 .button {
     padding: 10px 15px;
-    background: #4479BA;
+    background: url(http://www2.warnerbros.com/spacejam/movie/img/bg_stars.gif);
     color: #FFF;
+    border-radius: 9px;
+    box-shadow: 2px  2px  2px 2px  #888;
+    font-family: 'Eater';
+}
 
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Marcellus SC', serif;
 }

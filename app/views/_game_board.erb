@@ -7,7 +7,7 @@
     <div class="game_deck_board">
       <form method="post" action="/game/create">  
         <span>
-          <h1><%= deck.name %></h1><h2><%=deck.cards.length%> cards</h2>
+          <h2><%= deck.name %></h2><p><%=deck.cards.length%> cards</p>
         </span>
         
         <a href="/deck/<%=deck.id%>">View all cards </a>
