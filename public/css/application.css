@@ -6,7 +6,7 @@ body {
 
 .container {
   margin: 40px auto;
-  width: 720px;
+  width: 55%;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 10px 10px 10px 20px;
 
@@ -125,3 +125,27 @@ padding:5px 5px 10px 5px;
   padding:5px;
   margin: 5px;
 }
+
+.question-box{
+  border: 1px solid;
+  padding:5px;
+  margin: 5px;
+}
+
+
+#question h3{
+  text-align: center;
+}
+
+#question p {
+text-align: center;
+}
+
+#answer h3{
+  text-align: center;
+}
+
+#answer p {
+text-align: center;
+}
+

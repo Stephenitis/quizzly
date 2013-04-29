@@ -67,7 +67,7 @@
   <nav>
 
 
-    <p style="color: red"><%= @error %></p>
+    
 
     <h1><a href="/">Quizzly</a></h1>
 
@@ -80,7 +80,7 @@
     <% else %>
     
     <form  method="post" action="/user/login">
-      
+      <p style="color: red"><%= @error %></p>
       <label for="username">username</label>
       <input type="text" class="input-block-level-form" type="text" name="username">
 
@@ -96,7 +96,7 @@
 
   <%= yield %>
   
-  <footer>Team Siracha Dev Bootcamp 2013
+  <footer><a href= "http://www.github.com/stephenitis/quizzly"> Team Siracha Dev Bootcamp 2013 </a>
   </footer>
 
 </body>
