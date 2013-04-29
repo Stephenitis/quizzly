@@ -23,3 +23,12 @@ text-decoration: none;
   float: right;
 }
 # set width of box
+
+
+
+display: inline-block;
+# similar to floating
+
+
+line-height: 40px;
+# makes it center

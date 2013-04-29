@@ -4,18 +4,13 @@
 
   </div>
 
-    <form  method="post" action="/user/login">
-        
-        <h4>Username</h4>
-        <input type="text" class="input-block-level-form" type="text" name="username">
-
-        <h4>Password</h4>
-        <input type="password" class="input-block-level-form" name="password">
-
-        <p></p>
-        <button class="button-signin" type="submit">Sign in</button>
-       
-    </form>
+      <form class="nav-signin" method="post" action="/user/login">
+        <p style="color: red"><%= @error %></p>
+        <input type="text" class="signin-form" type="text" name="username" placeholder="username">
+        <input type="password" class="signin-form" name="password" placeholder="password">
+        <button class="button" type="submit">Sign in</button>       
+      </form>
+      
     <p style="color: red"><%= @error %></p>
 </div> 
 

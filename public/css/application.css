@@ -1,17 +1,5 @@
 body {
-  /*  background: #e6e5e0;*/
-/*  padding-top: 0px;
-  padding-bottom: 40px;*/
-
   margin: 0px;
-}
-
-
-.container {
-  margin: 100px auto;
-  width: 55%;
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px 10px 10px 50px;
 }
 
 th {
@@ -40,7 +28,7 @@ footer {
   padding: 0px;
   border-top: 1px solid #ddd;
   color: black;
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 
@@ -48,6 +36,7 @@ footer a {
   text-decoration: none;
   color: black;
   font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 
 }
@@ -65,15 +54,44 @@ nav h1 a:hover {
   color: gray;
 }
 
+h1 {
+
+  margin: 0px;
+}
+
+nav a {
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+label {
+  color: white;
+}
+
+form {
+  padding: 0px;
+  padding-top: 0px;
+}
+
+.container {
+  margin: 100px auto;
+  width: 55%;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px 10px 10px 50px;
+}
+
+
 .game_stats p {
   display: inline-block;
   width: 60px;
 }
 
-h1 {
 
-  margin: 0px;
-}
 
 .navlinks {
   width: 140px;
@@ -90,34 +108,16 @@ h1 {
   color: gray;
 }
 
+.nav-signin {
+ /*float: right;*/
+  display: inline-block;
 
+  float: right;
+  width: 440px;
 
-nav a {
-
-  padding-right: 10px;
-  text-decoration: none;
-
+  line-height: 40px;
 }
 
-#bar-example{
-  width-size: 100%;
-}
-
-#game_deck_container {
-
-  border: 3px solid gray;
-  padding: 10px;
-}
-
-/*.button {
-  padding: 10px 15px;
-  background: green;
-  color: #FFF;
-  border-radius: 9px;
-  box-shadow: 2px  2px  2px 2px  #888;
-  font-family: 'Marcellus SC', serif;
-}
-*/
 .button-signin {
   color: #1492d6;
   outline: none;
@@ -126,9 +126,8 @@ nav a {
   white-space: nowrap;
 }
 
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Marcellus SC', serif;
-}
+
+
 
 .deck_container {
   background-color: white;
@@ -155,6 +154,19 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
+.signin-form {
+  margin: 0px;
+  width: 156px;
+  border: 2px solid #dadada;
+  border-radius: 3px;
+}
+
+.signin-form:focus { 
+    outline: none;
+    border-color: #9ecaed;
+    /*box-shadow: 0 0 10px #9ecaed;*/
+}
+
 #question h3{
   text-align: center;
 }
@@ -172,4 +184,13 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
+#bar-example{
+  width-size: 100%;
+}
+
+#game_deck_container {
+
+  border: 3px solid gray;
+  padding: 10px;
+}
 
