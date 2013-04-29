@@ -32,8 +32,8 @@ end
 
 
 
-# seed_users
-# seed_decks
+seed_users
+seed_decks
 seed_attempts
 seed_games
 

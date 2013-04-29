@@ -1,16 +1,17 @@
 body {
-  background: #e6e5e0;
+  /*  background: #e6e5e0;*/
+/*  padding-top: 0px;
+  padding-bottom: 40px;*/
 
+  margin: 0px;
 }
 
 
 .container {
-  margin: 40px auto;
+  margin: 100px auto;
   width: 55%;
   background-color: rgba(0, 0, 0, 0.1);
-  padding: 10px 10px 10px 20px;
-
-
+  padding: 10px 10px 10px 50px;
 }
 
 th {
@@ -23,32 +24,45 @@ th {
 }
 
 nav {
-  box-shadow: 2px  2px  2px 2px  #888;
+
   width: 100%;
-  top: 0px;
-  position: fixed;  
-  padding: 10px 15px 10px 15px;
+  padding: 10px;
   height: 40px;
-  background: white ;
+  top: 0;
+  position: fixed;
+  background: black ;
 }
 
-footer{
-  background-color: white;
-  bottom: 0;
-  position:fixed;
+
+footer {
+  margin: 20px auto;
+  width: 59%;
+  padding: 0px;
+  border-top: 1px solid #ddd;
+  color: black;
+    padding-top: 10px;
+}
+
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+
 
 }
+
 
 nav h1 {
   float: left;
   
 }
 nav h1 a {
-  color:gray;
+  color: white;
 }
 
 nav h1 a:hover {
-  color: black;
+  color: gray;
 }
 
 .game_stats p {
@@ -62,18 +76,18 @@ h1 {
 }
 
 .navlinks {
-  width: 250px;
+  width: 140px;
   padding-top: 10px;
   float: right;
 
 }
 
 .navlinks a {
-  color: gray;
+  color: white;
 }
 
 .navlinks a:hover {
-  color: black;
+  color: gray;
 }
 
 
@@ -95,13 +109,21 @@ nav a {
   padding: 10px;
 }
 
-.button {
+/*.button {
   padding: 10px 15px;
   background: green;
   color: #FFF;
   border-radius: 9px;
   box-shadow: 2px  2px  2px 2px  #888;
   font-family: 'Marcellus SC', serif;
+}
+*/
+.button-signin {
+  color: #1492d6;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -116,9 +138,9 @@ h1, h2, h3, h4, h5, h6{
   float: right;
 }
 .game_deck_board{
-border:2px solid;
-margin: 5px 5px 5px 5px;
-padding:5px 5px 10px 5px;
+  border:2px solid;
+  margin: 5px 5px 5px 5px;
+  padding:5px 5px 10px 5px;
 }
 .cards{
   border:1px solid;
@@ -138,7 +160,7 @@ padding:5px 5px 10px 5px;
 }
 
 #question p {
-text-align: center;
+  text-align: center;
 }
 
 #answer h3{
@@ -146,6 +168,8 @@ text-align: center;
 }
 
 #answer p {
-text-align: center;
+  text-align: center;
 }
+
+
 
